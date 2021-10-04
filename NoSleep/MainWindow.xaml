@@ -5,13 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NoSleep"
         mc:Ignorable="d"
-        Title="MainWindow" Height="220" Width="320">
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-        </Grid.RowDefinitions>
-        <ToggleButton Content="NoSleep" Checked="HandleCheck" Unchecked="HandleUncheck"  Grid.Row="1" Width="100" Height="45"></ToggleButton>
-        <TextBlock x:Name="textStatus" Grid.Row="0" HorizontalAlignment="Center" FontSize="24"></TextBlock>
-    </Grid>
+        Title="Caffeine" Height="220" Width="320">
+    <TextBlock x:Name="textStatus" Grid.Row="0" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center" FontSize="18" TextWrapping="Wrap" Text="This PC will NOT sleep while this app is running!"></TextBlock>
 </Window>

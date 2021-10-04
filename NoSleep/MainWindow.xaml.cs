@@ -20,37 +20,12 @@ namespace NoSleep
     /// </summary>
     public partial class MainWindow : Window
     {
-        private bool _status;
-        private bool Status { get => _status;
-            set
-            {
-                _status = value;
-                if (_status)
-                {
-                    textStatus.Text = "Sleep is disabled";
-                    textStatus.Foreground = Brushes.Red;
-                    NoSleepCore.PreventSleep();
-                }
-                else
-                {
-                    textStatus.Text = "Sleep is enabled";
-                    textStatus.Foreground = Brushes.Green;
-                    NoSleepCore.UndoPreventSleep();
-                }
-            }
-        }
+
         public MainWindow()
         {
             InitializeComponent();
-            Status = false;
+            NoSleepCore.PreventSleep();
         }
-        public void HandleCheck(object sender, RoutedEventArgs e)
-        {
-            Status = true;
-        }
-        public void HandleUncheck(object sender, RoutedEventArgs e)
-        {
-            Status = false;
-        }
+     
     }
 }
